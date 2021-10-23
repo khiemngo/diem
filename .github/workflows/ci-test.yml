@@ -477,7 +477,7 @@ jobs:
     needs: prepare
     if: ${{ needs.prepare.outputs.test-non-rust-lint == 'true'  }}
     container:
-      image: diem/build_environment:${{ needs.prepare.outputs.changes-target-branch }}
+      image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
     steps:
       - uses: actions/checkout@v2.3.4
         with:
@@ -499,7 +499,7 @@ jobs:
     needs: prepare
     if: ${{ needs.prepare.outputs.any-changes-founds == 'true' }}
     container:
-      image: diem/build_environment:${{ needs.prepare.outputs.changes-target-branch }}
+      image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
@@ -526,7 +526,7 @@ jobs:
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}
     container:
-      image: diem/build_environment:${{ needs.prepare.outputs.changes-target-branch }}
+      image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
@@ -567,7 +567,7 @@ jobs:
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}
     container:
-      image: diem/build_environment:${{ needs.prepare.outputs.changes-target-branch }}
+      image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
@@ -598,7 +598,7 @@ jobs:
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}
     container:
-      image: diem/build_environment:${{ needs.prepare.outputs.changes-target-branch }}
+      image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     strategy:
@@ -681,7 +681,7 @@ jobs:
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' && needs.prepare.outputs.test-compatibility == 'true' }}
     container:
-      image: diem/build_environment:${{ needs.prepare.outputs.changes-target-branch }}
+      image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
@@ -746,7 +746,7 @@ jobs:
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}
     container:
-      image: diem/build_environment:${{ needs.prepare.outputs.changes-target-branch }}
+      image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
@@ -770,7 +770,7 @@ jobs:
     needs: prepare
     if: ${{ needs.prepare.outputs.test-test-coverage == 'true' }}
     container:
-      image: diem/build_environment:${{ needs.prepare.outputs.changes-target-branch }}
+      image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
@@ -868,7 +868,7 @@ jobs:
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}
     container:
-      image: diem/build_environment:${{ needs.prepare.outputs.changes-target-branch }}
+      image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
@@ -891,7 +891,7 @@ jobs:
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}
     container:
-      image: diem/build_environment:${{ needs.prepare.outputs.changes-target-branch }}
+      image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
         - "${{github.workspace}}:/opt/git/diem"
     steps:
